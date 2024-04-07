@@ -4,6 +4,10 @@ This is a backend server for a todo app. It is built using Node.js and Express.j
 
 Frontend Server link: https://github.com/Milttam/DIS-todo-mobile
 
+## Demo
+
+<img src="todoapp.gif" width = "600">
+
 ## Pre-requisites
 
 - Node.js

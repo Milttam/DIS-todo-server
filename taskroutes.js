@@ -11,7 +11,7 @@ let nextTaskId = 1
 
 // Get all tasks
 router.get('/', (req, res) => {
-  // console.log("GET All Tasks")
+  console.log("GET All Tasks")
   // console.log(tasks)
   res.json(tasks); 
 });
@@ -21,7 +21,7 @@ router.post('/tasks', (req, res) =>{
   // destructure taskName from request body
   const { taskName } = req.body;
 
-  //console.log("ADD Task Name: " + taskName)  
+  console.log("ADD Task Name: " + taskName)  
 
   // Create new task with next ID, taskName, and checked as false
   const newTask = { id: nextTaskId, title: taskName, isChecked: false};
@@ -67,6 +67,8 @@ router.put('/tasks/:taskIndex', (req, res) => {
 
 // Delete a task
 router.delete('/tasks/:taskIndex', (req, res) => {
+  console.log("DELETE Task: " + req.params.taskIndex)
+  
   // Extract index of task in array
   const taskIndex = parseInt(req.params.taskIndex);
 
